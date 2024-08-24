@@ -1,0 +1,36 @@
+public class LuckyNumber {
+
+    public static boolean isLucky(int num, int max) {
+        if (num == 1) {
+            return true;
+        }
+        if (num == max) {
+            return false;
+        }
+        int sum = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            sum += digit * digit;
+            num /= 10;
+        }
+        return isLucky(sum, max);
+    }
+
+    public static int nextLuckyNumber(int n) {
+        int max = Integer.MAX_VALUE; // Maximum number to check up to
+        while (true) {
+            n++;
+            if (isLucky(n, max)) {
+                return n;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // Input
+        int n = 7; // Example input
+
+        // Output
+        System.out.println(nextLuckyNumber(n));
+    }
+}

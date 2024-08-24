@@ -1,0 +1,72 @@
+//getters and setters use 
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+class Person{
+    String name;
+    int age;
+    String gender;
+
+    //paramterized constructor
+    public Person(){
+        
+    }
+    public Person(String n, int x){
+        name = n;
+        age = x;
+    }
+    public Person(String n, int x, String g){
+        name = n;
+        age = x;
+        gender = g;
+    }
+    
+    // getter for name
+    public String getName(){
+        return name;
+    }
+    //setter for name
+    public void setName(String n){
+        name = n;
+    }
+    //getter for age
+    public int getAge(){
+        return age;
+    }
+    //setter for age
+    public void setAge(int x){
+        if(x>0){
+            age = x;
+        }
+    }
+    //getter for gender
+    public String getGender(){
+        return gender;
+    }
+    //setter for gender
+    public void setGender(String g){
+        gender = g;
+    }
+    public void sayHello(){
+        System.out.println("Hi, My name is "+ name);
+    }
+}
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+
+        Person p3 = new Person();
+        p3.setName("Nishant");
+        p3.setAge(12);   //-5
+        p3.setGender("male");
+
+        System.out.println(p3.getName());
+        System.out.println(p3.getAge());
+        System.out.println(p3.getGender());
+	}
+        
+}

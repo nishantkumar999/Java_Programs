@@ -1,0 +1,71 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Car {
+  
+    int wheels;
+    String engine;
+    
+    public  Car(){
+        System.out.println("parent constructor is called");
+    }
+    
+    public Car(int wheels, String engine){
+        this.wheels = wheels;
+        this.engine = engine;
+    }
+
+    public void start(){
+        System.out.println("Car has Started");
+    }
+
+    public void run(){
+        System.out.println("Car is Running");
+    }
+}
+
+class sportCar extends Car{
+    int horsePower;
+
+    public sportCar(){
+        super();
+        System.out.println("sportCar constructor is called");
+    }
+
+    public void Hpincreasing(){
+        super.start();
+        super.run();
+        horsePower += 50;
+        System.out.println("HorsePower has been increased by 50");
+    }
+}
+class normalCar extends Car{
+    int airBags;
+
+    public normalCar(){
+        super(4, "Turbo");
+        
+        System.out.println("Normal car construtor is called");
+    }
+    public void openAirBags(){
+        super.start();
+        super.run();
+        System.out.println("Air bags open");
+    }
+}
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	sportCar sportCar = new sportCar();
+        sportCar.Hpincreasing();
+
+        normalCar normalCar = new normalCar();
+        normalCar.openAirBags();
+
+        System.out.println(normalCar.wheels);
+        System.out.println(normalCar.engine);
+	}
+}

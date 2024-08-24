@@ -1,0 +1,54 @@
+//Write code here
+        //  if (head == null || head.next == null) {
+        //    return head;
+        // }
+
+        Node curr = head;
+        Node evenHead = null;
+        Node oddHead = null;
+        Node evenTail = null;
+        Node oddTail = null;
+        int i=0;
+
+        while(curr != null){
+            if(i%2 == 0){
+                //even
+                if(evenTail == null){
+                    evenHead = curr;
+                    evenTail = curr;
+                }
+                else{
+                    evenTail.next = curr;
+                    evenTail = evenTail.next;
+                }
+            }
+            else{
+                //odd
+                if(oddTail == null){
+                    oddHead = curr;
+                    oddTail = curr;
+                }
+                else{
+                    oddTail.next = curr;
+                    oddTail = oddTail.next;
+                }
+            }
+            
+            curr = curr.next;
+            i++;
+        }
+        
+         if (evenHead != null) {
+            head = evenHead;
+            evenTail.next = oddHead;
+        } 
+         else {
+            head = oddHead;
+        }
+
+        if (oddTail != null) {
+            oddTail.next = null;
+        }
+
+        return head;
+    }      

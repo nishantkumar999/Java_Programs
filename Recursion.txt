@@ -1,0 +1,189 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//to print n natural numbers with for loop.
+        // int n = 5;
+        // int  product = 1;
+        // for(int i=1; i<=n; i++){
+        //     product *= i;
+        // }
+        // System.out.println(product);
+
+         
+	}
+}
+
+import java.util.*;
+
+class Main
+{
+    public static void main(String args[])throws IOException
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        int n=sc.nextInt();
+
+        solve(n);
+
+    }
+          // to print n numbers in reverse.
+	public static void solve(int n)   
+    {
+          // Your code here
+        if(n==0){
+            return; 
+        }
+        System.out.println(n);
+        solve(n-1);
+    }
+}
+
+import java.io.*;
+import java.util.*;
+
+class Main
+{
+    public static void main(String args[])throws IOException
+    {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println(sum(n));
+
+    }
+     // to sum of n natural numbers.
+	public static int sum(int n)   
+    {
+          // Your code here
+        if(n==0){
+            return 0; 
+        }
+        
+        int smallerSum = sum(n-1);
+        return n + smallerSum;
+    }
+}
+
+import java.io.*;
+import java.util.*;
+
+class Main
+{
+    public static void main(String args[])throws IOException
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        int n=sc.nextInt();
+
+        printNum(n);
+
+    }
+     // to print upto n numbers.
+	public static void printNum(int n)   
+    {
+          // Your code here
+        if(n==0){
+            return ; 
+        }
+        printNum(n-1);
+        System.out.print(n + " ");
+        
+    }
+}
+
+ import java.io.*;
+import java.util.*;
+
+class Main
+{
+    public static void main(String args[])throws IOException
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        int n=sc.nextInt();
+
+        printTable(n, 1);
+
+    }
+     // to print table of any number.
+	public static void printTable(int n, int i)   
+    {
+          // Your code here
+        if(i==11){  // i==0
+            return; 
+        }
+        System.out.println(i + "X" + n + " = " + i*n);
+        printTable(n, i+1);  // n, i-1
+        
+    }
+}
+
+
+import java.io.*;
+import java.util.*;
+
+class Main
+{
+    public static void main(String args[])throws IOException
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        int n=sc.nextInt();
+
+        printTable(n, 10);
+
+    }
+     // to sum of n natural numbers.
+	public static void printTable(int n, int i)   
+    {
+          // Your code here
+        if(i==0){
+            return; 
+        }
+        printTable(n, i-1);
+        System.out.println(i + "X" + n + " = " + i*n);
+         
+        
+    }
+}
+
+
+
+// import java.io.*;
+// import java.util.*;
+// public class Main {
+//   public static void multiplyRecursively(int n, int m) {
+    
+//     //To print multiply of two numbers with operation of addition.
+//       int ans  = 0;
+//        for(int i=1; i<=m; i++){
+//            ans += n;
+//        }
+//       System.out.println(ans);
+//   }
+
+//   public static void main(String[] args) {
+//     Scanner scn = new Scanner(System.in);
+//     int n = scn.nextInt();
+//     int m = scn.nextInt();
+//     multiplyRecursively(n, m);
+//   }
+// }
+
+// public class Main{
+     public static void main(String[] args){
+//     int x = 2;
+//     int n = 3;
+//     int ans = 1;
+        //To print power of a number with for loop.
+//     for(int i=1; i<=n; i++){
+//          ans *= x;
+        
+//     }
+//      System.out.println(ans);
+//   }
+// }
