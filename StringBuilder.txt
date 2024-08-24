@@ -1,0 +1,35 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+        // String s = "Hello";
+       
+        // StringBuilder s1 = new StringBuilder(s);
+        // System.out.println("Enter the string = " + s1);
+        // s1.append("abc");
+        // s1.append("xyz");
+
+        // System.out.println(s1);
+
+        // StringBuilder s2 = new StringBuilder("ABC");
+        // System.out.println("Enter the word = " + s2);
+        // s2.append("123");
+        // System.out.println(s2);
+        // System.out.println(s2.length());
+
+        // StringBuilder s = new StringBuilder("LambardFibonaccci");
+        // s.replace(2, 15, "NishantKumar");
+        // System.out.println(s);
+
+        StringBuilder s3 = new StringBuilder();
+        s3.append("ABCDE");
+        s3.delete(2, 3);
+        System.out.println(s3);
+        
+	}
+}

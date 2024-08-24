@@ -1,0 +1,94 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{  
+      String s1 = "Random";
+        String s2 = "random";
+
+       int n = s1.length();
+       int m = s2.length();
+
+        boolean isEqual = true;
+        if(n != m){
+            isEqual = false;
+        }
+        else{
+            for(int i=0; i<n; i++){
+                if(s1.charAt(i) != s2.charAt(i)){
+                    isEqual = false;
+                    break;
+                }
+            }
+        }
+
+        if(isEqual == true){
+            System.out.println("Both strings are equal");
+        }
+        else{
+            System.out.println("Both strings are not equal");
+        }
+
+        
+    }
+}
+
+import java.util.*;
+ 
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+        String s1 = "accIojob";
+        String ans = "";
+
+        for(int i=0; i<s1.length(); i++){
+            char c = s1.charAt(i);
+            if(c >= 'a' && c<= 'z'){  // c>= 'A' && c<= Z
+                char capitalC = (char)(c - 'a' + 'A'); // c - 'A' + 'a' /*for small case letters to print.*/
+                ans  = ans + capitalC;
+                
+            }   
+            else{
+                 ans = ans + c;
+            }
+        }
+        System.out.println(ans);
+  
+	}
+}
+
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//Sub string print progarm.
+        String s = "acciojob";
+        String ans = "";
+        int a = 1;
+        int b = 4;
+
+        for(int i=0; i<4; i++){
+            ans = ans + s.charAt(i);     
+             
+        }
+        System.out.print(ans);
+	}
+           //  to compare the two string.
+        String s1 = "acciojob";
+        String s2 = "acciojob";
+
+        if(s1 == s2){
+            System.out.println("Address Equal");
+        }
+        else{
+            System.out.println("Not Equal");
+        }
+          // Checking how string add with another string.
+        String s = "hello ";
+        s = s + "world";
+        System.out.println(s);
+}

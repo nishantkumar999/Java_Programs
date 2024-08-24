@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		//your code here
+        int [] arr = {4,3,-3,5,1,6,7,2};
+        int n = arr.length;
+
+        ArrayList<Integer> ans = SlidingWindowMaximum(n, arr, 3);
+        System.out.println(ans);
+	}
+
+    public static ArrayList<Integer> SlidingWindowMaximum(int n, int []arr, int k){
+        ArrayList<Integer> ans = new ArrayList<>();
+
+        for(int i=0; i<=n-3; i++){
+            int maxInWindow = Integer.MIN_VALUE;
+            for(int j=i; j<=i+k-1; j++){
+                maxInWindow = Math.max(maxInWindow, arr[j]);
+            }
+            ans.add(maxInWindow);
+        }
+
+        return ans;
+    }
+}
